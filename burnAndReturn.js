@@ -28,8 +28,10 @@ function burnAndReturnTokens() {
 
     matic.burnERC20(childToken, amount, {
         from: fromAddress
-    }).then(res =>{
-        console.log(res);
+    }).then(res => {
+        console.log(res)
+    }).catch(err => {
+        console.log(err);
     });
 
     // console.log('Tokens burned. Hash is ', tx);
